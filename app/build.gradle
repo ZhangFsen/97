@@ -1,0 +1,38 @@
+plugins { id "com.android.application" }
+
+android {
+    namespace "com.colox.adminmobile"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.colox.adminmobile"
+        minSdk 23
+        targetSdk 35
+        versionCode 3
+        versionName "1.2.3-remember-password"
+    }
+
+    signingConfigs {
+        stable {
+            storeFile file("../colox-admin-mobile-stable-signing.jks")
+            storePassword "miaojizhang2026"
+            keyAlias "miaojizhang"
+            keyPassword "miaojizhang2026"
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.stable
+        }
+        release {
+            signingConfig signingConfigs.stable
+            minifyEnabled false
+        }
+    }
+
+}
+
+dependencies {
+    implementation "androidx.core:core:1.13.1"
+}

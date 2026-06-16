@@ -1,0 +1,13 @@
+# 云端用户管理器 Pro 签名说明
+
+本项目内置固定签名文件：colox-admin-mobile-stable-signing.jks
+
+当前 Android 配置：
+- applicationId: com.colox.adminmobile
+- App 名称: 云端用户管理器 Pro
+- keyAlias: miaojizhang
+- 签名文件密码: 沿用模板原密码，避免破坏现有 keystore 构建
+
+注意：
+- 请不要随意删除或替换 `colox-admin-mobile-stable-signing.jks`。
+- 如果以后要正式发布，建议重新生成你自己的正式签名文件，并同步修改 `app/build.gradle`。
